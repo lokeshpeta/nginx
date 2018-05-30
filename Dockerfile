@@ -18,7 +18,8 @@ RUN Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\Dnscache\Par
 
 WORKDIR /nginx
 
-COPY nginx.conf ./conf
+#COPY nginx.lps.conf ./conf/nginx.conf
+COPY nginx.bgc.conf ./conf/nginx.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "\"daemon off;\""]
